@@ -1,7 +1,3 @@
-/* ------------------------------
-   ESTILOS GENERALES
------------------------------- */
-
 * {
   margin: 0;
   padding: 0;
@@ -10,16 +6,26 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 body {
+  scrollbar-width: none;
   font-family: "Nunito Sans", sans-serif;
   background-color: #fce8df;
 }
 
-/* ------------------------------
-   CABECERA / NAVBAR
------------------------------- */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* ------ INICIO ------ */
+
+/* NAVBAR */
 
 .cabecera {
   width: 88%;
@@ -28,7 +34,7 @@ body {
 
   background-color: #fce8df;
 
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -159,27 +165,25 @@ body {
 .inicio {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-/* SOLO se desenfoca el fondo */
 .inicio::before {
   content: "";
   position: absolute;
-  top: -10px;
-  left: -10px;
-  width: calc(100% + 20px);
-  height: calc(100% + 20px);
+  inset: 0;
 
   background-image: url("../img/fondo.png");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  background-repeat: no-repeat;
 
   filter: blur(5px);
   z-index: 0;
 }
-
 .texto-inicio {
   position: absolute;
   top: 42%;
@@ -269,4 +273,354 @@ body {
 
 .boton-carta:hover span {
   transform: translateX(10px);
+}
+
+/* ------ CARTA ------ */
+.carta {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #dd65a9;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------ SOBRE NOSOTROS ------ */
+.sobre-nosotros {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #4b93eb;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------ CONTACTO ------ */
+
+.contacto {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #fce8df;
+  display: flex;
+  flex-direction: column;
+}
+
+/* RAMA IZQUIERDA */
+
+.rama-izquierda {
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  width: 400px;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* RAMA DERECHA */
+
+.rama-derecha {
+  position: absolute;
+  top: 90px;
+  right: -20px;
+  width: 400px;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* CONTENIDO POR ENCIMA DE LAS RAMAS */
+
+.contacto-contenido {
+  position: relative;
+  z-index: 1;
+
+  width: 85%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+  padding: 40px 0 25px;
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* TÍTULO */
+
+.titulo-contacto {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.titulo-contacto h2 {
+  font-family: "Concert One", sans-serif;
+  font-size: 45px;
+  color: #24243f;
+  margin-bottom: 10px;
+}
+
+.titulo-contacto p {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #24243f;
+}
+
+/* COLUMNAS */
+
+.columnas-contacto {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 55px;
+  align-items: center;
+}
+
+/* FORMULARIO */
+
+.formulario-contacto {
+  background-color: #f9d3d9;
+  padding: 25px;
+  border-radius: 30px;
+}
+
+.formulario-contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.campos-superiores {
+  display: flex;
+  gap: 15px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #fff7f2;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 15px;
+  outline: none;
+}
+
+.formulario-contacto textarea {
+  height: 130px;
+  resize: vertical;
+}
+
+.formulario-contacto button {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 14px 35px;
+  border: none;
+  border-radius: 40px;
+  background-color: #ed6090;
+  color: white;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.formulario-contacto button:hover {
+  background-color: #d94778;
+  transform: translateY(-3px);
+}
+
+/* INFORMACIÓN */
+
+.informacion-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.dato-contacto {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 17px 22px;
+  border-radius: 40px;
+  background-color: #f9d3d9;
+  color: #24243f;
+}
+
+.dato-contacto i {
+  font-size: 24px;
+}
+
+.dato-contacto p {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* MAPA */
+
+.mapa-contacto {
+  height: 180px;
+  border-radius: 25px;
+  background-color: #f9d3d9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #24243f;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.mapa-contacto span {
+  font-weight: 700;
+}
+
+/* FOOTER */
+.footer {
+  width: 100%;
+  height: 300px;
+  flex-shrink: 0;
+
+  background-color: #24243f;
+
+  position: relative;
+  overflow: hidden;
+
+  padding: 20px 5%;
+  box-sizing: border-box;
+
+  color: white;
+}
+
+.contenido-footer {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  gap: 30px;
+}
+
+/* LOGO */
+
+.logo-footer img {
+  width: 270px;
+  height: auto;
+}
+
+/* NEWSLETTER */
+
+.newsletter {
+  border-left: 2px solid white;
+  padding-left: 45px;
+}
+
+.newsletter h3,
+.redes h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.newsletter p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* FORMULARIO */
+.formulario-newsletter {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.formulario-newsletter input {
+  width: 230px;
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 30px;
+
+  font-size: 15px;
+  outline: none;
+}
+
+.formulario-newsletter button {
+  padding: 12px 22px;
+
+  background-color: #ed6090;
+  color: white;
+
+  border: none;
+  border-radius: 30px;
+
+  font-size: 15px;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.formulario-newsletter button:hover {
+  background-color: #d94778;
+}
+
+/* REDES */
+.redes {
+  border-left: 2px solid white;
+  padding-left: 45px;
+  height: 110px;
+}
+
+.redes-iconos {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.redes-iconos i {
+  font-size: 30px;
+  color: white;
+}
+
+/* COPYRIGHT */
+.copyright {
+  position: absolute;
+  text-align: center;
+  bottom: 25px;
+  left: 0;
+  width: 100%;
+  font-size: 12px;
+  color: #c5c3d2;
+}
+
+/* NUBES DECORATIVAS */
+
+.nube-izquierda {
+  position: absolute;
+  width: 250px;
+  left: -50px;
+  bottom: -30px;
+  z-index: 0;
+}
+
+.nube-derecha {
+  position: absolute;
+  width: 250px;
+  right: -40px;
+  bottom: -30px;
+  z-index: 0;
 }

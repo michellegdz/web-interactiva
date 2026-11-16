@@ -16,6 +16,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- Iconos -->
     <script
@@ -36,9 +37,7 @@
 
         <a href="#carta" class="enlace">Carta</a>
 
-        <a href="#reservas" class="enlace">Reservas</a>
-
-        <a href="#nosotros" class="enlace">Sobre Nosotros</a>
+        <a href="#sobre-nosotros" class="enlace">Sobre Nosotros</a>
 
         <a href="#contacto" class="enlace">Contacto</a>
       </nav>
@@ -65,6 +64,130 @@
           Explora nuestra carta
           <i class="fa-solid fa-arrow-right"></i>
         </a>
+      </section>
+
+      <!-- CARTA -->
+      <section class="carta" id="carta"></section>
+
+      <!-- SOBRE NOSOTROS -->
+      <section class="sobre-nosotros" id="sobre-nosotros"></section>
+
+      <!-- CONTACTO -->
+      <section class="contacto" id="contacto">
+        <!-- RAMAS DE CEREZO -->
+        <img src="img/florcerezo2.png" class="rama-izquierda" alt="" />
+
+        <img
+          src="img/florcerezo.png"
+          class="rama-derecha"
+          alt="Ilustración de una rama de cerezo marrón que se extiende horizontalmente, cubierta de flores rosas de distintos tamaños. Su estilo sencillo transmite un ambiente delicado y alegre."
+        />
+
+        <!-- CONTENIDO CONTACTO -->
+        <div class="contacto-contenido">
+          <!-- Aquí tienes tu título, formulario y datos -->
+        </div>
+        <div class="contacto-contenido">
+          <!-- TÍTULO -->
+          <div class="titulo-contacto">
+            <h2>Contacto</h2>
+            <p>¿Tienes alguna pregunta? ¡Escríbenos!</p>
+          </div>
+
+          <!-- COLUMNAS -->
+          <div class="columnas-contacto">
+            <!-- FORMULARIO -->
+            <div class="formulario-contacto">
+              <form>
+                <div class="campos-superiores">
+                  <input type="text" placeholder="Nombre" required />
+                  <input type="email" placeholder="Email" required />
+                </div>
+
+                <input type="text" placeholder="Asunto" required />
+
+                <textarea
+                  placeholder="Escribe tu mensaje..."
+                  required
+                ></textarea>
+
+                <button type="submit">
+                  Enviar mensaje
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+
+            <!-- INFORMACIÓN -->
+            <div class="informacion-contacto">
+              <div class="dato-contacto">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>C/ Sakura 12, Madrid</p>
+              </div>
+
+              <div class="dato-contacto">
+                <i class="fa-regular fa-clock"></i>
+                <p>Lun - Dom: 19:00 - 02:00</p>
+              </div>
+
+              <div class="dato-contacto">
+                <i class="fa-regular fa-envelope"></i>
+                <p>b-side@gmail.com</p>
+              </div>
+
+              <!-- MAPA -->
+              <div class="mapa-contacto">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d759.3476649397502!2d-3.712232530362322!3d40.422347719178646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287ac91b395f%3A0x6fe4727d12afcd3b!2sC.%20del%20R%C3%ADo%2C%208-20%2C%20Centro%2C%2028013%20Madrid!5e0!3m2!1ses!2ses!4v1794845323364!5m2!1ses!2ses"
+                  width="600"
+                  height="450"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                ></iframe>
+                <span>Encuéntranos aquí</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <!-- Nubes decorativas -->
+          <img src="img/nube1.png" class="nube-izquierda" alt="" />
+          <img src="img/nube2.png" class="nube-derecha" alt="" />
+
+          <div class="contenido-footer">
+            <!-- Logo -->
+            <div class="logo-footer">
+              <img src="img/B-SIDE blanco.png" alt="B-SIDE" />
+            </div>
+
+            <!-- Newsletter -->
+            <div class="newsletter">
+              <h3>Suscríbete a nuestra newsletter</h3>
+              <p>Recibe novedades, promociones y mucho más 📌</p>
+
+              <div class="formulario-newsletter">
+                <input type="email" placeholder="Tu email..." />
+                <button>Suscribirme</button>
+              </div>
+            </div>
+
+            <!-- Redes -->
+            <div class="redes">
+              <h3>Siguenos</h3>
+              <div class="redes-iconos">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <p class="copyright">© 2026 B-SIDE. Todos los derechos reservados.</p>
+        </footer>
       </section>
     </main>
   </body>
