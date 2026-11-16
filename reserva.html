@@ -17,7 +17,8 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <!-- Links -->
-    <link rel="stylesheet" href="css/reserva.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/reservas.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="js/script.js" defer></script>
 
@@ -28,7 +29,7 @@
     ></script>
   </head>
 
-  <body>
+  <body class="pagina-reservas">
     <!-- 1️⃣ RESERVAR MESA -->
 
     <!-- Navbar -->
@@ -54,66 +55,23 @@
     </header>
 
     <!-- Contenido Reserva -->
-    <section class="reservas">
-      <!-- TÍTULO Y SUBTÍTULOS -->
-      <div class="titulo-reservas">
-        <h1>¡Reserva tu mesa!</h1>
 
-        <p>Tu próxima experiencia favorita empieza aquí.</p>
-
-        <span>Ven a disfrutar de los sabores de Asia en B-SIDE ♡</span>
+    <main class="contenido-reserva">
+      <div class="imagen-reserva">
+        <img src="img/reserva.jpg" alt="Restaurante B-SIDE" />
       </div>
 
-      <!-- IMAGEN Y FORMULARIO -->
-      <div class="reserva-contenido">
-        <!-- IMAGEN -->
-        <div class="imagen-reserva">
-          <img
-            src="img/restaurante.jpg"
-            alt="Interior del restaurante B-SIDE"
-          />
-        </div>
+      <div class="formulario-reserva">
+        <p class="subtitulo-reserva">B-SIDE · ASIAN FOOD</p>
+        <h1>Reserva tu mesa</h1>
+        <p class="texto-reserva">
+          ¿Te apetece disfrutar de una experiencia diferente? Reserva tu mesa y
+          ven a visitarnos.
+        </p>
 
-        <!-- FORMULARIO -->
-        <div class="formulario-reserva">
-          <h2>¡Nos encantará recibirte!</h2>
-
-          <p>Completa los siguientes datos para reservar tu mesa.</p>
-
-          <form>
-            <!-- Fecha -->
-            <label for="fecha">Fecha de la reserva</label>
-
-            <input type="date" id="fecha" name="fecha" required />
-
-            <!-- Hora -->
-            <label for="hora">Hora</label>
-
-            <select id="hora" name="hora" required>
-              <option value="">Selecciona una hora</option>
-              <option value="19:00">19:00</option>
-              <option value="20:00">20:00</option>
-              <option value="21:00">21:00</option>
-              <option value="22:00">22:00</option>
-              <option value="23:00">23:00</option>
-            </select>
-
-            <!-- Número de personas -->
-            <label for="personas">Número de personas</label>
-
-            <select id="personas" name="personas" required>
-              <option value="">Selecciona el número de personas</option>
-              <option value="1">1 persona</option>
-              <option value="2">2 personas</option>
-              <option value="3">3 personas</option>
-              <option value="4">4 personas</option>
-              <option value="5">5 personas</option>
-              <option value="6">6 personas</option>
-            </select>
-
-            <!-- Nombre -->
-            <label for="nombre">Nombre</label>
-
+        <form action="#" method="post">
+          <div class="campo">
+            <label for="nombre">Nombre completo</label>
             <input
               type="text"
               id="nombre"
@@ -121,26 +79,100 @@
               placeholder="Tu nombre"
               required
             />
+          </div>
 
-            <!-- Email -->
+          <div class="campo">
             <label for="email">Correo electrónico</label>
-
             <input
               type="email"
               id="email"
               name="email"
-              placeholder="Tu email"
+              placeholder="tu@email.com"
               required
             />
+          </div>
 
-            <!-- Botón -->
-            <button type="submit">
-              Reservar Mesa
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </form>
+          <div class="campo">
+            <label for="telefono">Teléfono</label>
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              placeholder="Tu teléfono"
+              required
+            />
+          </div>
+
+          <div class="fila-campos">
+            <div class="campo">
+              <label for="fecha">Fecha</label>
+              <input type="date" id="fecha" name="fecha" required />
+            </div>
+
+            <div class="campo">
+              <label for="hora">Hora</label>
+              <input type="time" id="hora" name="hora" required />
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="personas">Número de personas</label>
+            <select id="personas" name="personas" required>
+              <option value="">Selecciona una opción</option>
+              <option value="1">1 persona</option>
+              <option value="2">2 personas</option>
+              <option value="3">3 personas</option>
+              <option value="4">4 personas</option>
+              <option value="5">5 personas</option>
+              <option value="6">6 personas</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="comentarios">Peticiones especiales</label>
+            <textarea
+              id="comentarios"
+              name="comentarios"
+              placeholder="¿Alguna petición especial?"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="boton-reserva">Reservar mesa</button>
+        </form>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <!-- Decoración -->
+      <img src="img/nube1.png" class="nube-izquierda" alt="" />
+      <img src="img/nube2.png" class="nube-derecha" alt="" />
+      <div class="contenido-footer">
+        <!-- Logo -->
+        <div class="logo-footer">
+          <img src="img/B-SIDE blanco.png" alt="B-SIDE" />
+        </div>
+        <!-- Newsletter -->
+        <div class="newsletter">
+          <h3>Suscríbete a nuestra newsletter</h3>
+          <p>Recibe novedades, promociones y mucho más 📌</p>
+          <div class="formulario-newsletter">
+            <input type="email" placeholder="Tu email..." />
+            <button>Suscribirme</button>
+          </div>
+        </div>
+        <!-- Redes -->
+        <div class="redes">
+          <h3>Siguenos</h3>
+          <div class="redes-iconos">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
         </div>
       </div>
-    </section>
+      <!-- Copyright -->
+      <p class="copyright">© 2026 B-SIDE. Todos los derechos reservados.</p>
+    </footer>
   </body>
 </html>

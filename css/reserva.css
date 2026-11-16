@@ -19,6 +19,11 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+body.pagina-reservas {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
 /* ------ 1️⃣ RESERVAR MESA ------ */
 
@@ -113,166 +118,249 @@ body::-webkit-scrollbar {
   font-size: 20px;
 }
 
-/* =================================
-   PÁGINA DE RESERVAS
-================================= */
-
-.reservas {
-  width: 100%;
-  min-height: 100vh;
-  padding: 125px 8% 70px;
-  background-color: #fce8df;
-  position: relative;
-  overflow: hidden;
+.pagina-reservas .reserva {
+  flex: 1;
+  min-height: 0;
 }
 
-/* TÍTULO */
+/* CONTENIDO DE RESERVAS */
 
-.titulo-reservas {
-  text-align: center;
-  margin-bottom: 40px;
-}
+.contenido-reserva {
+  min-height: calc(100vh - 85px);
+  padding: 120px 8% 50px;
+  box-sizing: border-box;
 
-.titulo-reservas h1 {
-  font-family: "Lilita One", sans-serif;
-  font-size: 55px;
-  color: #24243f;
-  margin-bottom: 10px;
-}
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
 
-.titulo-reservas p {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 21px;
-  font-weight: 800;
-  color: #ed6090;
-}
-
-.titulo-reservas span {
-  display: block;
-  margin-top: 8px;
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 16px;
-  color: #24243f;
-}
-
-/* CONTENIDO PRINCIPAL */
-
-.reserva-contenido {
-  width: 100%;
-  max-width: 1150px;
-  min-height: 520px;
-  margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-
-  background-color: #f9d3d9;
-  border: 3px solid #ed6090;
-  border-radius: 35px;
-  overflow: hidden;
-
-  box-shadow: 0 8px 20px rgba(36, 36, 63, 0.08);
+  background-color: #fff7f3;
 }
 
 /* IMAGEN */
 
 .imagen-reserva {
-  width: 100%;
-  min-height: 520px;
+  width: 45%;
+  height: 650px;
   overflow: hidden;
+  border-radius: 180px 180px 20px 20px;
 }
 
 .imagen-reserva img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
 /* FORMULARIO */
 
 .formulario-reserva {
-  padding: 35px 45px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 45%;
+  max-width: 520px;
 }
 
-.formulario-reserva h2 {
-  font-family: "Concert One", sans-serif;
-  font-size: 32px;
-  color: #24243f;
-  margin-bottom: 8px;
+.subtitulo-reserva {
+  color: #e88ba7;
+  font-size: 13px;
+  letter-spacing: 3px;
+  font-weight: bold;
 }
 
-.formulario-reserva p {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 15px;
+.formulario-reserva h1 {
+  font-size: 42px;
   color: #24243f;
-  margin-bottom: 25px;
+  margin: 10px 0;
+}
+
+.texto-reserva {
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 30px;
 }
 
 /* CAMPOS */
 
-.formulario-reserva form {
+.campo {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-}
-
-.formulario-reserva label {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 14px;
-  font-weight: 800;
-  color: #24243f;
-  margin-bottom: -6px;
-}
-
-.formulario-reserva input,
-.formulario-reserva select {
+  margin-bottom: 18px;
   width: 100%;
-  padding: 13px 18px;
-
-  border: 2px solid #f3a6bb;
-  border-radius: 18px;
-
-  background-color: #fff7f2;
-
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 15px;
-  color: #24243f;
-
-  outline: none;
-  transition: border-color 0.3s ease;
 }
 
-.formulario-reserva input:focus,
-.formulario-reserva select:focus {
-  border-color: #ed6090;
+.campo label {
+  color: #24243f;
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  padding: 13px 15px;
+  border: 1px solid #ead9dc;
+  border-radius: 10px;
+  background-color: white;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  border-color: #e88ba7;
+}
+
+.campo textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* DOS CAMPOS EN LA MISMA FILA */
+
+.fila-campos {
+  display: flex;
+  gap: 15px;
+}
+
+.fila-campos .campo {
+  flex: 1;
 }
 
 /* BOTÓN */
 
-.formulario-reserva button {
-  margin-top: 15px;
+.boton-reserva {
+  width: 100%;
   padding: 15px;
-
   border: none;
-  border-radius: 40px;
-
-  background-color: #ed6090;
+  border-radius: 30px;
+  background-color: #e88ba7;
   color: white;
-
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 17px;
-  font-weight: 800;
-
+  font-size: 15px;
+  font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
-.formulario-reserva button:hover {
+.boton-reserva:hover {
+  background-color: #24243f;
+}
+
+/* Footer */
+
+.footer {
+  width: 100%;
+  height: 190px;
+  flex-shrink: 0;
+  background-color: #24243f;
+  position: relative;
+  overflow: hidden;
+  padding: 20px 5%;
+  box-sizing: border-box;
+  color: white;
+}
+.contenido-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+/* Decoración */
+.nube-izquierda {
+  position: absolute;
+  width: 250px;
+  left: -50px;
+  bottom: -30px;
+  z-index: 0;
+}
+.nube-derecha {
+  position: absolute;
+  width: 250px;
+  right: -40px;
+  bottom: -30px;
+  z-index: 0;
+}
+
+/* Logo */
+.logo-footer img {
+  width: 270px;
+  height: auto;
+}
+
+/* Newsletter */
+.newsletter {
+  border-left: 2px solid white;
+  padding-left: 45px;
+}
+.newsletter h3,
+.redes h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.newsletter p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Formulario Newsletter */
+.formulario-newsletter {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.formulario-newsletter input {
+  width: 230px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  outline: none;
+}
+.formulario-newsletter button {
+  padding: 12px 22px;
+  background-color: #ed6090;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.formulario-newsletter button:hover {
   background-color: #d94778;
-  transform: translateY(-3px);
+}
+
+/* Redes */
+.redes {
+  border-left: 2px solid white;
+  padding-left: 45px;
+  height: 110px;
+}
+.redes-iconos {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+.redes-iconos i {
+  font-size: 30px;
+  color: white;
+}
+
+/* Copyright */
+.copyright {
+  position: absolute;
+  text-align: center;
+  bottom: 25px;
+  left: 0;
+  width: 100%;
+  font-size: 12px;
+  color: #c5c3d2;
 }
