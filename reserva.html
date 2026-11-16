@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>B-SIDE | Asian Food After Hours</title>
+
+    <!-- Tipografías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Fredoka:wght@300..700&family=Lilita+One&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Links -->
+    <link rel="stylesheet" href="css/reserva.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="js/script.js" defer></script>
+
+    <!-- Iconos -->
+    <script
+      src="https://kit.fontawesome.com/c3fd22b8e3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- 1️⃣ RESERVAR MESA -->
+
+    <!-- Navbar -->
+    <header class="cabecera">
+      <!-- Logo -->
+      <a href="#inicio" class="logo">
+        <img src="img/B-SIDE.png" alt="Logo de B-SIDE" />
+      </a>
+
+      <!-- Links -->
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a href="index.html#inicio" class="enlace">Inicio</a>
+        <a href="index.html#carta" class="enlace">Carta</a>
+        <a href="index.html#sobre-nosotros" class="enlace">Sobre Nosotros</a>
+        <a href="index.html#contacto" class="enlace">Contacto</a>
+      </nav>
+
+      <!-- Botón Reserva -->
+      <a href="reserva.html" class="boton-reserva">
+        <i class="fa-regular fa-calendar"></i>
+        Reservar Mesa
+      </a>
+    </header>
+
+    <!-- Contenido Reserva -->
+    <section class="reservas">
+      <!-- TÍTULO Y SUBTÍTULOS -->
+      <div class="titulo-reservas">
+        <h1>¡Reserva tu mesa!</h1>
+
+        <p>Tu próxima experiencia favorita empieza aquí.</p>
+
+        <span>Ven a disfrutar de los sabores de Asia en B-SIDE ♡</span>
+      </div>
+
+      <!-- IMAGEN Y FORMULARIO -->
+      <div class="reserva-contenido">
+        <!-- IMAGEN -->
+        <div class="imagen-reserva">
+          <img
+            src="img/restaurante.jpg"
+            alt="Interior del restaurante B-SIDE"
+          />
+        </div>
+
+        <!-- FORMULARIO -->
+        <div class="formulario-reserva">
+          <h2>¡Nos encantará recibirte!</h2>
+
+          <p>Completa los siguientes datos para reservar tu mesa.</p>
+
+          <form>
+            <!-- Fecha -->
+            <label for="fecha">Fecha de la reserva</label>
+
+            <input type="date" id="fecha" name="fecha" required />
+
+            <!-- Hora -->
+            <label for="hora">Hora</label>
+
+            <select id="hora" name="hora" required>
+              <option value="">Selecciona una hora</option>
+              <option value="19:00">19:00</option>
+              <option value="20:00">20:00</option>
+              <option value="21:00">21:00</option>
+              <option value="22:00">22:00</option>
+              <option value="23:00">23:00</option>
+            </select>
+
+            <!-- Número de personas -->
+            <label for="personas">Número de personas</label>
+
+            <select id="personas" name="personas" required>
+              <option value="">Selecciona el número de personas</option>
+              <option value="1">1 persona</option>
+              <option value="2">2 personas</option>
+              <option value="3">3 personas</option>
+              <option value="4">4 personas</option>
+              <option value="5">5 personas</option>
+              <option value="6">6 personas</option>
+            </select>
+
+            <!-- Nombre -->
+            <label for="nombre">Nombre</label>
+
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Tu nombre"
+              required
+            />
+
+            <!-- Email -->
+            <label for="email">Correo electrónico</label>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Tu email"
+              required
+            />
+
+            <!-- Botón -->
+            <button type="submit">
+              Reservar Mesa
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

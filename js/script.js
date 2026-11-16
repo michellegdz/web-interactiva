@@ -1,3 +1,5 @@
+/* Link Activo Indicador */
+
 const enlaces = document.querySelectorAll(".navegacion .enlace");
 const secciones = document.querySelectorAll("body > section[id]");
 

@@ -1,0 +1,278 @@
+/* ------ GENERAL ------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+body {
+  scrollbar-width: none;
+  font-family: "Nunito Sans", sans-serif;
+  background-color: #fce8df;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* ------ 1️⃣ RESERVAR MESA ------ */
+
+/* Navbar */
+.cabecera {
+  width: 88%;
+  max-width: 1450px;
+  height: 85px;
+  background-color: #fce8df;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4%;
+  border-radius: 0 0 50px 50px;
+  box-shadow: 0 4px 12px rgba(30, 25, 55, 0.08);
+  z-index: 10;
+}
+
+/* Logo */
+.logo img {
+  width: 230px;
+  height: auto;
+  display: block;
+}
+
+/* Links */
+.navegacion {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+.enlace {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #17172f;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.enlace::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 4px;
+  background-color: #ed6090;
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+.enlace.activo::after {
+  width: 100%;
+}
+
+/* Hover links */
+.enlace:hover {
+  color: #ed6090;
+}
+.enlace.activo::after {
+  width: 100%;
+}
+
+/* Botón reserva */
+.boton-reserva {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background-color: #ed6090;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 40px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+/* Hover botón reserva */
+.boton-reserva:hover {
+  background-color: #d94379;
+  transform: translateY(-3px);
+}
+.icono-reserva {
+  font-size: 20px;
+}
+
+/* =================================
+   PÁGINA DE RESERVAS
+================================= */
+
+.reservas {
+  width: 100%;
+  min-height: 100vh;
+  padding: 125px 8% 70px;
+  background-color: #fce8df;
+  position: relative;
+  overflow: hidden;
+}
+
+/* TÍTULO */
+
+.titulo-reservas {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.titulo-reservas h1 {
+  font-family: "Lilita One", sans-serif;
+  font-size: 55px;
+  color: #24243f;
+  margin-bottom: 10px;
+}
+
+.titulo-reservas p {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  color: #ed6090;
+}
+
+.titulo-reservas span {
+  display: block;
+  margin-top: 8px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  color: #24243f;
+}
+
+/* CONTENIDO PRINCIPAL */
+
+.reserva-contenido {
+  width: 100%;
+  max-width: 1150px;
+  min-height: 520px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+
+  background-color: #f9d3d9;
+  border: 3px solid #ed6090;
+  border-radius: 35px;
+  overflow: hidden;
+
+  box-shadow: 0 8px 20px rgba(36, 36, 63, 0.08);
+}
+
+/* IMAGEN */
+
+.imagen-reserva {
+  width: 100%;
+  min-height: 520px;
+  overflow: hidden;
+}
+
+.imagen-reserva img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* FORMULARIO */
+
+.formulario-reserva {
+  padding: 35px 45px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.formulario-reserva h2 {
+  font-family: "Concert One", sans-serif;
+  font-size: 32px;
+  color: #24243f;
+  margin-bottom: 8px;
+}
+
+.formulario-reserva p {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 15px;
+  color: #24243f;
+  margin-bottom: 25px;
+}
+
+/* CAMPOS */
+
+.formulario-reserva form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.formulario-reserva label {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  color: #24243f;
+  margin-bottom: -6px;
+}
+
+.formulario-reserva input,
+.formulario-reserva select {
+  width: 100%;
+  padding: 13px 18px;
+
+  border: 2px solid #f3a6bb;
+  border-radius: 18px;
+
+  background-color: #fff7f2;
+
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 15px;
+  color: #24243f;
+
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.formulario-reserva input:focus,
+.formulario-reserva select:focus {
+  border-color: #ed6090;
+}
+
+/* BOTÓN */
+
+.formulario-reserva button {
+  margin-top: 15px;
+  padding: 15px;
+
+  border: none;
+  border-radius: 40px;
+
+  background-color: #ed6090;
+  color: white;
+
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.formulario-reserva button:hover {
+  background-color: #d94778;
+  transform: translateY(-3px);
+}
