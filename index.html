@@ -75,106 +75,144 @@
     </section>
 
     <!-- 2️⃣ SECCIÓN CARTA -->
-    <section class="carta" id="carta"></section>
+
+    <section class="carta" id="carta">
+      <!-- Decoración -->
+      <img src="img/nube1.png" class="nube-carta nube-carta-izquierda" alt="" />
+      <img src="img/nube3.png" class="nube-carta nube-carta-derecha" alt="" />
+
+      <!-- Título -->
+      <div class="titulo-carta">
+        <h1>Nuestra carta</h1>
+        <p>Gran variedad de platos y entrantes asiáticos.</p>
+      </div>
+
+      <!-- Filtros -->
+      <div class="filtros-carta">
+        <button class="filtro activo" data-filter="todos">Todo</button>
+        <button class="filtro" data-filter="entrantes">Entrantes</button>
+        <button class="filtro" data-filter="sushi">Sushi</button>
+        <button class="filtro" data-filter="ramen">Ramen</button>
+        <button class="filtro" data-filter="calientes">Platos calientes</button>
+        <button class="filtro" data-filter="postres">Postres</button>
+        <button class="filtro" data-filter="bebidas">Bebidas</button>
+      </div>
+
+      <!-- Carrusel de platos -->
+      <div class="contenedor-carta">
+        <div class="platos-carrusel">
+          <!-- Plato 1 -->
+          <article class="tarjeta-plato" data-category="sushi">
+            <img src="img/plato1.webp" alt="B-SIDE Roll" class="imagen-plato" />
+            <span class="categoria-plato">Sushi</span>
+            <h2>B-SIDE Roll</h2>
+            <p>Roll de salmón, aguacate y salsa especial.</p>
+            <span class="precio-plato">14,90 €</span>
+          </article>
+
+          <!-- Plato 2 -->
+          <article class="tarjeta-plato" data-category="sushi">
+            <img
+              src="img/plato2.webp"
+              alt="Nombre del plato"
+              class="imagen-plato"
+            />
+            <span class="categoria-plato">Sushi</span>
+            <h2>Nombre del plato</h2>
+            <p>Descripción breve del plato elegido.</p>
+            <span class="precio-plato">12,90 €</span>
+          </article>
+
+          <!-- Plato 3 -->
+          <article class="tarjeta-plato" data-category="sushi">
+            <img
+              src="img/plato3.webp"
+              alt="Nombre del plato"
+              class="imagen-plato"
+            />
+            <span class="categoria-plato">Sushi</span>
+            <h2>Nombre del plato</h2>
+            <p>Descripción breve del plato elegido.</p>
+            <span class="precio-plato">13,50 €</span>
+          </article>
+
+          <!-- Plato 4 -->
+          <article class="tarjeta-plato" data-category="entrantes">
+            <img
+              src="img/plato4.webp"
+              alt="Nombre del plato"
+              class="imagen-plato"
+            />
+            <span class="categoria-plato">Entrantes</span>
+            <h2>Nombre del plato</h2>
+            <p>Descripción breve del plato elegido.</p>
+            <span class="precio-plato">9,90 €</span>
+          </article>
+
+          <!-- Plato 5 -->
+          <article class="tarjeta-plato" data-category="ramen">
+            <img
+              src="img/plato5.jpg"
+              alt="Nombre del plato"
+              class="imagen-plato"
+            />
+            <span class="categoria-plato">Ramen</span>
+            <h2>Ramen giapponese</h2>
+            <p>Descripción breve del plato elegido.</p>
+            <span class="precio-plato">15,90 €</span>
+          </article>
+
+          <!-- Plato 6 -->
+          <article class="tarjeta-plato" data-category="calientes">
+            <img
+              src="img/plato6.jpg"
+              alt="Nombre del plato"
+              class="imagen-plato"
+            />
+            <span class="categoria-plato">Platos calientes</span>
+            <h2>Nombre del plato</h2>
+            <p>Descripción breve del plato elegido.</p>
+            <span class="precio-plato">11,90 €</span>
+          </article>
+
+          <!-- Plato 7 -->
+          <article class="tarjeta-plato" data-category="postres">
+            <img
+              src="img/plato7.jpg"
+              alt="Nombre del plato"
+              class="imagen-plato"
+            />
+            <span class="categoria-plato">Postres</span>
+            <h2>Nombre del plato</h2>
+            <p>Descripción breve del plato elegido.</p>
+            <span class="precio-plato">6,50 €</span>
+          </article>
+
+          <!-- Plato 8 -->
+          <article class="tarjeta-plato" data-category="bebidas">
+            <img
+              src="img/plato8.jpg"
+              alt="Nombre del plato"
+              class="imagen-plato"
+            />
+            <span class="categoria-plato">Bebidas</span>
+            <h2>Nombre del plato</h2>
+            <p>Descripción breve del plato elegido.</p>
+            <span class="precio-plato">3,50 €</span>
+          </article>
+        </div>
+
+        <!-- Flecha para avanzar -->
+        <button class="flecha-carta" aria-label="Ver más platos">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
 
     <!-- 3️⃣ SECCIÓN SOBRE NOSOTROS -->
     <section class="sobre-nosotros" id="sobre-nosotros"></section>
 
     <!-- 4️⃣ SECCIÓN CONTACTO -->
-    <section class="contacto" id="contacto">
-      <!-- Decoración -->
-      <img src="img/florcerezo2.png" class="rama-izquierda" alt="" />
-      <img src="img/florcerezo.png" class="rama-derecha" alt="" />
-
-      <!-- Título y subtitulos -->
-      <div class="contacto-contenido">
-        <div class="titulo-contacto">
-          <h2>Contacto</h2>
-          <p>¿Tienes alguna pregunta? ¡Escríbenos!</p>
-        </div>
-        <div class="columnas-contacto">
-          <!-- Formulario -->
-          <div class="formulario-contacto">
-            <form>
-              <div class="campos-superiores">
-                <input type="text" placeholder="Nombre" required />
-                <input type="email" placeholder="Email" required />
-              </div>
-              <input type="text" placeholder="Asunto" required />
-              <textarea placeholder="Escribe tu mensaje..." required></textarea>
-              <button type="submit">
-                Enviar mensaje
-                <i class="fa-solid fa-paper-plane"></i>
-              </button>
-            </form>
-          </div>
-
-          <!-- Información -->
-          <div class="informacion-contacto">
-            <div class="dato-contacto">
-              <i class="fa-solid fa-location-dot"></i>
-              <p>C/ Sakura 12, Madrid</p>
-            </div>
-            <div class="dato-contacto">
-              <i class="fa-regular fa-clock"></i>
-              <p>Lun - Dom: 19:00 - 02:00</p>
-            </div>
-            <div class="dato-contacto">
-              <i class="fa-regular fa-envelope"></i>
-              <p>b-side@gmail.com</p>
-            </div>
-
-            <!-- Mapa -->
-            <div class="mapa-contacto">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d759.3476649397502!2d-3.712232530362322!3d40.422347719178646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287ac91b395f%3A0x6fe4727d12afcd3b!2sC.%20del%20R%C3%ADo%2C%208-20%2C%20Centro%2C%2028013%20Madrid!5e0!3m2!1ses!2ses!4v1794845323364!5m2!1ses!2ses"
-                width="600"
-                height="450"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-              ></iframe>
-              <span>Encuéntranos aquí</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Footer -->
-      <footer class="footer">
-        <!-- Decoración -->
-        <img src="img/nube1.png" class="nube-izquierda" alt="" />
-        <img src="img/nube2.png" class="nube-derecha" alt="" />
-        <div class="contenido-footer">
-          <!-- Logo -->
-          <div class="logo-footer">
-            <img src="img/B-SIDE blanco.png" alt="B-SIDE" />
-            <!-- Copyright -->
-            <p class="copyright">
-              © 2026 B-SIDE. Todos los derechos reservados.
-            </p>
-          </div>
-          <!-- Newsletter -->
-          <div class="newsletter">
-            <h3>Suscríbete a nuestra newsletter</h3>
-            <p>Recibe novedades, promociones y mucho más 📌</p>
-            <div class="formulario-newsletter">
-              <input type="email" placeholder="Tu email..." />
-              <button>Suscribirme</button>
-            </div>
-          </div>
-          <!-- Redes -->
-          <div class="redes">
-            <h3>Siguenos</h3>
-            <div class="redes-iconos">
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-              <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </section>
+    <section class="contacto" id="contacto"></section>
   </body>
 </html>
