@@ -459,12 +459,404 @@ body::-webkit-scrollbar {
 }
 
 /* ------ 4️⃣ SECCIÓN CONTACTO ------ */
+
 .contacto {
-  position: relative;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
-  background-color: #3cc7b2;
+  min-height: 0;
+  background-color: #ffe6df;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+/* CONTENIDO PRINCIPAL */
+
+.contenido-contacto {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  padding: 125px 8% 25px;
+}
+
+/* TÍTULO */
+
+.titulo-contacto {
+  text-align: center;
+  margin-bottom: 38px;
+  position: relative;
+  z-index: 2;
+}
+
+.titulo-contacto h1 {
+  font-family: "Fredoka", sans-serif;
+  font-size: 45px;
+  color: #24243f;
+  margin-bottom: 3px;
+}
+
+.titulo-contacto p {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  color: #24243f;
+}
+
+/* RAMAS DECORATIVAS */
+
+.rama-contacto {
+  position: absolute;
+  width: 330px;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.rama-izquierda {
+  left: -100px;
+  bottom: 55px;
+  transform: rotate(-15deg);
+}
+
+.rama-derecha {
+  right: -35px;
+  top: 120px;
+}
+
+/* COLUMNAS */
+
+.columnas-contacto {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* =====================================
+   FORMULARIO
+===================================== */
+
+.columna-formulario {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.formulario-contacto {
+  width: 100%;
+  max-width: 440px;
+  background-color: #ffc1ce;
+  padding: 16px 23px 14px;
+  border-radius: 27px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  position: relative;
+  z-index: 1;
+}
+
+.campos-superiores {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: #fffdfb;
+  border-radius: 15px;
+  padding: 10px 14px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 13px;
+  color: #24243f;
+}
+
+.formulario-contacto input {
+  height: 38px;
+}
+
+.formulario-contacto textarea {
+  height: 85px;
+  resize: none;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+  box-shadow: 0 0 0 2px #ff6594;
+}
+
+.boton-enviar {
+  align-self: center;
+  background-color: #ff5790;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 9px 27px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.boton-enviar i {
+  margin-left: 7px;
+}
+
+.boton-enviar:hover {
+  background-color: #e8437c;
+  transform: scale(1.04);
+}
+
+/* GATO DECORATIVO */
+
+.gato-contacto {
+  position: absolute;
+  width: 205px;
+  height: auto;
+  left: -190px;
+  bottom: -5px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* =====================================
+   FAQ
+===================================== */
+
+.columna-faq {
+  width: 100%;
+}
+
+.columna-faq h2 {
+  display: inline-block;
+  background-color: #ff8eaa;
+  color: white;
+  font-family: "Fredoka", sans-serif;
+  font-size: 36px;
+  padding: 4px 25px;
+  border-radius: 30px;
+  margin-bottom: 22px;
+}
+
+.lista-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.pregunta-faq {
+  background-color: #fffdfb;
+  border-radius: 13px;
+  overflow: hidden;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.pregunta-faq summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 11px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  color: #4b4b4b;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.pregunta-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.icono-faq {
+  color: #ff719b;
+  font-size: 21px;
+  font-weight: 400;
+  transition: transform 0.3s ease;
+}
+
+.pregunta-faq p {
+  padding: 0 15px 13px;
+  color: #666;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Cambia el + por - cuando se abre */
+
+.pregunta-faq[open] .icono-faq {
+  transform: rotate(45deg);
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer-contacto {
+  width: 100%;
+  height: 175px;
+  min-height: 175px;
+  background-color: #24243f;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.contenido-footer {
+  width: 76%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 0.8fr;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* COLUMNAS DEL FOOTER */
+
+.footer-logo,
+.footer-newsletter,
+.footer-redes {
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-logo {
+  align-items: center;
+  padding-right: 35px;
+}
+
+.footer-logo img {
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 13px;
+}
+
+.footer-logo p {
+  color: white;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 10px;
+  text-align: center;
+}
+
+/* NEWSLETTER */
+
+.footer-newsletter {
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  padding: 0 38px;
+}
+
+.footer-newsletter h3,
+.footer-redes h3 {
+  color: white;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.footer-newsletter p {
+  color: white;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+  margin-bottom: 11px;
+}
+
+.formulario-newsletter {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.formulario-newsletter input {
+  width: 190px;
+  min-width: 0;
+  height: 38px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  padding: 0 18px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 13px;
+}
+
+.formulario-newsletter button {
+  background-color: #ff5790;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 18px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+.formulario-newsletter button:hover {
+  background-color: #e8437c;
+}
+
+/* REDES SOCIALES */
+
+.footer-redes {
+  align-items: center;
+  padding-left: 30px;
+}
+
+.iconos-redes {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 13px;
+}
+
+.iconos-redes a {
+  color: white;
+  font-size: 31px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.iconos-redes a:hover {
+  color: #ff8eaa;
+  transform: translateY(-4px);
+}
+
+/* NUBES DEL FOOTER */
+
+.nube-footer {
+  position: absolute;
+  width: 190px;
+  height: auto;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.nube-footer-izquierda {
+  left: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nube-footer-derecha {
+  right: -25px;
+  top: 50%;
+  transform: translateY(-50%);
 }
